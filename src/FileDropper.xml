@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<widget id="clearis.filedropper.FileDropper" pluginWidget="true" needsEntityContext="true" offlineCapable="true"
+        supportedPlatform="Web"
+        xmlns="http://www.mendix.com/widget/1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.mendix.com/widget/1.0/ ../node_modules/mendix/custom_widget.xsd">
+    <name>File Dropper</name>
+    <description>My widget description</description>
+    <icon/>
+    <properties>
+        <!--    CONTENT OF THE BOX  -->
+        <propertyGroup caption="ContainerContent">
+            <property key="content" type="widgets" required="false">
+                <caption>content</caption>
+                <description>GO CRAZY!</description>
+            </property>
+        </propertyGroup>
+        <propertyGroup caption="General">
+            <property key="fileEntity" type="string" required="true">
+                <caption>File Entity</caption>
+                <description>System.FileDocument, or inheritance of System.FileDocument</description>
+            </property>
+            <property key="onUploadMicroflow" type="string" required="true">
+                <caption>OnUpload Call Microflow (path)</caption>
+                <description>Microflow to call, when files are dropped. Paramater should be list of the entity that's selected above!</description>
+            </property>
+
+        </propertyGroup>
+        <!--    PROPERTY GROUP RESTRICTION  -->
+    </properties>
+</widget>
